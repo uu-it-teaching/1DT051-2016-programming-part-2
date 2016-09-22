@@ -1,5 +1,7 @@
 # 1DT051 2016 - Programming part 2
 
+Files used for [programming - part 2](http://www.it.uu.se/education/course/homepage/introit/ht16/programming/part-2/) of the course Information Technloogy (1DT051) 2016.
+
 ## mandatory.py
 
 A collection of mandatory exercises on the following topics:
