@@ -4,103 +4,114 @@ Tests for the functions in the mandatory.py module
 
 from mandatory import *
 
-print
-print "========== mandatory.py =========="
+def main():
+    '''Run all tests.'''
 
-# ===== is_odd()
-print
+    is_odd_test()
+    is_even_test()
+    ith_test()
+    set_ith_test()
+    take_test()
+    print_powers_of_two_test()
+    length_test()
+    sum_test()
+    print_all_test()
+    print_double_test()
+    max_test()
+    print_odd_test()
+    print_even_test()
 
-n = 1
-print "id_odd(%d) --> %s" % (n, is_odd(n))
-n = 22
-print "id_odd(%d) --> %s" % (n, is_odd(n))
-n = 31
-print "id_odd(%d) --> %s" % (n, is_odd(n))
-
-# is_even()
-print
-
-n = 1
-print "id_even(%d) --> %s" % (n, is_even(n))
-n = 22
-print "id_even(%d) --> %s" % (n, is_even(n))
-n = 31
-print "id_even(%d) --> %s" % (n, is_even(n))
+def is_odd_test():
+    print
+    n = 1
+    print "id_odd(%d) --> %r" % (n, is_odd(n))
+    n = 22
+    print "id_odd(%d) --> %r" % (n, is_odd(n))
+    n = 31
+    print "id_odd(%d) --> %r" % (n, is_odd(n))
 
 
-# ith()
-print
+def is_even_test():
+    print
+    n = 1
+    print "is_even(%d) --> %r" % (n, is_even(n))
+    n = 22
+    print "is_even(%d) --> %r" % (n, is_even(n))
+    n = 31
+    print "is_even(%d) --> %r" % (n, is_even(n))
 
-xs = ['apa', 22, 'bosse', 127]
-i = 2
-print "ith(%s, %d) --> %s" % (xs, i, ith(xs,i))
-i = -1
-print "ith(%s, %d) --> %s" % (xs, i, ith(xs,i))
 
-# set_ith()
-print
+def ith_test():
+    print
+    xs = ['apa', 22, 'bosse', 127]
+    i = 2
+    print "ith(%r, %d) --> %r" % (xs, i, ith(xs,i))
+    i = -1
+    print "ith(%r, %d) --> %r" % (xs, i, ith(xs,i))
 
-str = "BOSSE"
-i = 2
-print "set_ith(%s, %i, '%s') --> " % (xs, i, str)
-set_ith(xs, i, str)
-print xs
+def set_ith_test():
+    print
+    xs = ['apa', 22, 'bosse', 127]
+    str = "BOSSE"
+    i = 2
+    print "set_ith(%r, %i, %r) --> " % (xs, i, str)
+    set_ith(xs, i, str)
+    print xs
 
-# take()
-print
+def take_test():
+    print
+    xs = [1,2,3,4,5]
+    n = 3
+    print "take(%r, %r) --> %r " % (xs, n, take(n, xs))
 
-xs = [1,2,3,4,5]
-n = 3
-print "take(%s, %s) --> %s " % (xs, n, take(n, xs)) 
 
-# print_powers_of_two()
-print
+def print_powers_of_two_test():
+    print
+    print_powers_of_two(5)
 
-print_powers_of_two(5)
 
-# length()
-print
+def length_test():
+    print
+    xs = []
+    print "length(%r) --> %d" % (xs, length(xs))
+    xs = [1,2,3]
+    print "length(%r) --> %d" % (xs, length(xs))
 
-xs = []
-print "length(%s) --> %d" % (xs, length(xs))
-xs = [1,2,3]
-print "length(%s) --> %d" % (xs, length(xs))
+def sum_test():
+    print
+    xs = []
+    print "sum(%r) --> %r" % (xs, sum(xs))
+    xs = [1,2,3,4,5,6,7,8,9,10]
+    print "sum(%r) --> %r" % (xs, sum(xs))
 
-# sum()
-print
+def print_all_test():
+    print
+    xs = ['one', 2, 'three']
+    print "print_all(%r)" % xs
+    print_all(xs)
 
-xs = []
-print "sum(%s) --> %s" % (xs, sum(xs))
-xs = [1,2,3,4,5,6,7,8,9,10]
-print "sum(%s) --> %s" % (xs, sum(xs))
+def print_double_test():
+    print
+    ns = [1,2,3,4,5]
+    print "print_double(%r) -->" % ns
+    print_double(ns)
 
-# print_all()
-print
-xs = ['one', 2, 'three']
-print "print_all(%s)" % xs
-print_all(xs)
+def max_test():
+    print
+    ns = [1,2,3,4,5]
+    print "max(%r) --> %r" % (ns, max(ns))
 
-# print_double()
-print
+def print_odd_test():
+    print
+    ns = [1,2,3,4,5]
+    print "print_odd(%r) -->" % ns
+    print_odd(ns)
 
-ns = [1,2,3,4,5]
-print "print_double(%s) -->" % ns
-print_double(ns)
+def print_even_test():
+    print
+    ns = [1,2,3,4,5]
+    print "print_even(%r) -->" % ns
+    print_even(ns)
 
-# max()
-print
-
-print "max(%s) --> %s" % (ns, max(ns))
-
-# print_odd()
-print
-
-print "print_odd(%s) -->" % ns
-print_odd(ns)
-
-# print_even()
-print
-
-print "print_even(%s) -->" % ns
-print_even(ns)
-
+if __name__ == "__main__":
+    main()
