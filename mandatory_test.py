@@ -20,6 +20,9 @@ def main():
     max_test()
     print_odd_test()
     print_even_test()
+    replace_odds_test()
+    repeat_test()
+    lengths_test()
 
 def is_odd_test():
     print
@@ -112,6 +115,23 @@ def print_even_test():
     ns = [1,2,3,4,5]
     print "print_even(%r) -->" % ns
     print_even(ns)
+
+def replace_odds_test():
+    print
+    ns = range(10)
+    print "replace_odds(%r) --> " % ns
+    print ns
+
+def repeat_test():
+    print
+    x = 127
+    n = 5
+    print "repeat(%r, %r) --> %r" % (x, n, repeat(x, n))
+
+def lengths_test():
+    print
+    xss = [[], [1], ['apa', 'bosse', 77]]
+    print "lengths(%r) --> %r" % (xss, lengths(xss))
 
 if __name__ == "__main__":
     main()

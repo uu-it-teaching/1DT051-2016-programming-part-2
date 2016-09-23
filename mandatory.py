@@ -54,7 +54,8 @@ def is_odd(n):
     False
     '''
 
-    return True # TODO: You must change this!
+    return True # TODO: You must change this! TIP: Use the modulo operator % to
+                # check if the reminder when dividing by 2 is equal to 1.
 
 def is_even(n):
     '''
@@ -399,105 +400,82 @@ def print_even(ns):
     # TIP: Use for-in to iterate through all elements in ns.
 
 
-if __name__ == "__main__":
+def replace_odds(ns, replacement):
+    '''
+    Arguments:
 
-    print
-    print "========== mandatory.py =========="
+    ns :: list of numbers
 
-    # ===== is_odd()
-    print
-    
-    n = 1
-    print "id_odd(%d) --> %s" % (n, is_odd(n))
-    n = 22
-    print "id_odd(%d) --> %s" % (n, is_odd(n))
-    n = 31
-    print "id_odd(%d) --> %s" % (n, is_odd(n))
-    
-    # is_even()
-    print
-    
-    n = 1
-    print "id_even(%d) --> %s" % (n, is_even(n))
-    n = 22
-    print "id_even(%d) --> %s" % (n, is_even(n))
-    n = 31
-    print "id_even(%d) --> %s" % (n, is_even(n))
-    
-    
-    # ith()
-    print
-    
-    xs = ['apa', 22, 'bosse', 127]
-    i = 2
-    print "ith(%s, %d) --> %s" % (xs, i, ith(xs,i))
-    i = -1
-    print "ith(%s, %d) --> %s" % (xs, i, ith(xs,i))
-    
-    # set_ith()
-    print
-    
-    str = "BOSSE"
-    i = 2
-    print "set_ith(%s, %i, '%s') --> " % (xs, i, str)
-    set_ith(xs, i, str)
-    print xs
-    
-    # take()
-    print
-    
-    xs = [1,2,3,4,5]
-    n = 3
-    print "take(%s, %s) --> %s " % (xs, n, take(n, xs)) 
-    
-    # print_powers_of_two()
-    print
-    
-    print_powers_of_two(5)
-    
-    # length()
-    print
-    
+    replacement :: any data type
+
+    Side effect:
+        Replace each odd number in ns with replacement.
+
+    Return value :: list
+        Returns ns where all odd numbers have been replaced with replacement.
+
+    Example:
+
+    >>> replace_odds([1,2,3,4], 'odd')
+    ['odd', 2, 'odd', 4]
+    '''
+
+    # TODO: You must add code here.
+
+    # TIP: Use for-in to iterate through the elements of ns.
+
+    # TIP: Use is_odd to check if an element of ns is an odd number.
+
+    return ns
+
+def repeat(x, n):
+    '''
+    Arguments:
+
+    x :: any data type
+
+    n :: int
+
+    Return value :: list
+        Returns a new list of length n where all elements are equal to x.
+
+    Example:
+
+    >>> repeat(127, 5)
+    [127, 127, 127]
+    >>> repeat('*', 10)
+
+    '''
+
     xs = []
-    print "length(%s) --> %d" % (xs, length(xs))
-    xs = [1,2,3]
-    print "length(%s) --> %d" % (xs, length(xs))
-    
-    # sum()
-    print
-    
-    xs = []
-    print "sum(%s) --> %s" % (xs, sum(xs))
-    xs = [1,2,3,4,5,6,7,8,9,10]
-    print "sum(%s) --> %s" % (xs, sum(xs))
-    
-    # print_all()
-    print
-    xs = ['one', 2, 'three']
-    print "print_all(%s)" % xs
-    print_all(xs)
-    
-    # print_double()
-    print
-    
-    ns = [1,2,3,4,5]
-    print "print_double(%s) -->" % ns
-    print_double(ns)
-    
-    # max()
-    print
-    
-    print "max(%s) --> %s" % (ns, max(ns))
-    
-    # print_odd()
-    print
-    
-    print "print_odd(%s) -->" % ns
-    print_odd(ns)
 
-    # print_even()
-    print
-    
-    print "print_even(%s) -->" % ns
-    print_even(ns)
+    # TODO: You must add code here.
 
+    # TIP: Create a list with n elements using range and use for-in to iterate
+    # through this list.
+
+    # TIP: Use xs.append(x) to append a new element x to xs.
+
+    return xs
+
+def lengths(xss):
+    '''
+    Argument:
+
+    xss :: list of lists
+
+    Returns :: list
+        Returns a list of lists lengths for each list in xss.
+
+    Example:
+
+    >>> xss = [[], [1], [1,2], ['apa', 'bosse', 77]]
+    >>> lenghts(xss)
+    [0, 1, 2, 3]
+    '''
+
+    ls = []
+
+    # TODO: You must add code here.
+
+    return ls
