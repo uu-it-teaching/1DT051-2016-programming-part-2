@@ -119,7 +119,8 @@ def print_even_test():
 def replace_odds_test():
     print
     ns = range(10)
-    print "replace_odds(%r) --> " % ns
+    print "replace_odds(%r, %s) -->" % (ns, "odd")
+    replace_odds(ns, 'odd')
     print ns
 
 def repeat_test():
