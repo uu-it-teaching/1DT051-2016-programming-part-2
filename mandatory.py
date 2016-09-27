@@ -441,7 +441,7 @@ def repeat(x, n):
 
     Example:
 
-    >>> repeat(127, 5)
+    >>> repeat(127, 3)
     [127, 127, 127]
     >>> repeat('*', 10)
 
